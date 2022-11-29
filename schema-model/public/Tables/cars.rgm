@@ -1,0 +1,14 @@
+table "public"."cars" {
+  columns = (
+    column "carid" {
+      type = integer
+    }
+    column "lastname" {
+      type = character varying(255)
+    }
+    column "firstname" {
+      type = character varying(255)
+    }
+  )
+}
+
