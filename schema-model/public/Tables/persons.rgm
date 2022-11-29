@@ -9,6 +9,9 @@ table "public"."persons" {
     column "first_name" {
       type = character varying(255)
     }
+    column "address" {
+      type = character varying(255)
+    }
   )
 }
 
