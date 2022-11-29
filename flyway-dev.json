@@ -1,0 +1,45 @@
+{
+  "version": "2.0",
+  "name": "manhattan",
+  "id": "b8c9bb79-0e40-4e03-af44-5c935d3ed0d0",
+  "databaseType": "PostgreSql",
+  "schemas": [
+    "public"
+  ],
+  "developmentDatabase": {
+    "connectionProvider": {
+      "url": "jdbc:postgresql://localhost/desktop",
+      "type": "UsernamePassword"
+    }
+  },
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ],
+    "shadowDatabase": {
+      "connectionProvider": {
+        "url": "jdbc:postgresql://localhost/final",
+        "type": "UsernamePassword"
+      }
+    },
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "url": "jdbc:postgresql://localhost/desktop",
+          "username": "postgres",
+          "password": {
+            "name": "Flyway Desktop 20ac4a58-dc11-49e8-8801-af02cae99221",
+            "secretType": "DefaultSecretStore"
+          },
+          "type": "UsernamePassword"
+        },
+        "schemas": [
+          "public"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+table "public"."persons" {
+  columns = (
+    column "personid" {
+      type = integer
+    }
+    column "lastname" {
+      type = character varying(255)
+    }
+  )
+}
+
