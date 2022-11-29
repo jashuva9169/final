@@ -31,7 +31,7 @@ steps:
      echo 'step1:Installing schemachange' 
      pip install schemachange
      echo 'Step 2: Running schemachange'
-     schemachange -f migrations -a fd77989.central-india.azure -u JASHUVA -r ACCOUNTADMIN -w COMPUTE -d flyway -c flyway.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+     schemachange -f migrations -a fd77989.central-india.azure -u JASHUVA -r ACCOUNTADMIN -w COMPUTE -d final -c final.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
   env: 
     SNOWFLAKE_PASSWORD: Jashuva9169@
      
