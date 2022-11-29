@@ -15,6 +15,9 @@ table "public"."persons" {
     column "city" {
       type = character varying(255)
     }
+    column "location" {
+      type = character varying(255)
+    }
   )
 }
 
